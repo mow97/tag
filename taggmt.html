@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceas Analogic Dinamic</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .ceas-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        /* Imaginea de fundal cu cadranul */
+        .cadran {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        /* Canvas-ul pe care desenăm limbile ceasului */
+        #canvasCeas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ceas-container">
+        <img src="taggmt.png" alt="Cadran Ceas" class="cadran">
+        <canvas id="canvasCeas" width="500" height="500"></canvas>
+    </div>
+
+    <!-- Apelarea fișierului extern de JavaScript -->
+    <script src="scriptIVob.js"></script>
+</body>
+</html>
